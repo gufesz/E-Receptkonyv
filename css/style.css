@@ -1,0 +1,205 @@
+/* Alapstílusok */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --dark-color: #292f36;
+    --light-color: #f7fff7;
+    --accent-color: #ffd166;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+
+/* Reszponzív design */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigáció */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255,255,255,0.8)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fooldalhatter{
+    background-image: url('https://cdn1.sph.harvard.edu/wp-content/uploads/sites/21/2018/07/fruitveg.jpeg');
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Recept grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gombok */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff5252;
+}
+
+section{
+    padding: 20px;
+}
+
+footer{
+    padding: 20px;
+}
+
+/* Reszponzív média lekérdezések */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+   
+    .hero h1 {
+        font-size: 2rem;
+    }
+   
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.auth-switch{
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.auth-containerBejel{
+    text-align: center;
+    align-self: center;
+    width: 450px;
+    margin-top: 7%;
+    height: 500px;
+    background-color: rgba(253, 197, 180, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.auth-containerRegiszt{
+    margin-left: 36%;
+    text-align: center;
+    align-self: center;
+    width: 450px;
+    margin-top: 7%;
+    height: 700px;
+    background-color: rgba(253, 197, 180, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.alcim{
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.label{
+    font-size: 25px;
+}
+
+.input{
+    font-size: 16px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    width: 280px;
+    height: 28px;
+}
+
+.loginbtn{
+
+    font-size: 17px;
+}
+
+.hatterkep{
+    background-repeat: no-repeat;
+    background-image: url('https://cdn1.sph.harvard.edu/wp-content/uploads/sites/21/2018/07/fruitveg.jpeg');
+    background-size: cover;
+}
+
+.krealascontent{
+    min-height: 440px;
+    text-align: center;
+    align-self: center;
+    width: 30%;
+    margin-top: 7%;
+    background-color: rgba(253, 197, 180, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+}
