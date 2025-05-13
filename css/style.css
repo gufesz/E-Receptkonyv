@@ -104,7 +104,10 @@ body {
 }
 
 .kereso input{
-  
+  background-image: url('../icon.png');
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: 490px 5px;
   letter-spacing: 1.5px;
   font-size: 40px;
   height: 60px;
