@@ -26,7 +26,6 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #333;
-  text-decoration: none;
 }
 
 .nav-links {
@@ -77,6 +76,17 @@ body {
   color: #333;
 }
 
+.hero-container2 {
+  width: 380px;
+  max-width: 90%;
+  height: auto;
+  min-height: 430px;
+  background-color: rgba(202, 202, 202, 0.8);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
 .buttons {
   margin-top: 55px;
   display: flex;
@@ -105,23 +115,47 @@ body {
 }
 
 .kereso input{
-  background-image: url('../icon.png');
-  background-size: 50px;
-  background-repeat: no-repeat;
-  background-position: 490px 5px;
+  
   letter-spacing: 1.5px;
   font-size: 40px;
   height: 60px;
   width: 550px;
 }
 
-.buttons table tr td{
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+.tabla{
+  display: flex;
+  gap: 110px;
 }
 
+.geCim{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.5;
+  margin-bottom: 65px;
+  color: #333;
+}
 
+.valamiszoveg{
+  margin-top: 40px;
+  font-size: 25px;
+  color: #333;
+}
+
+.hero-container2 input{
+  font-size: 17px;
+  width: 310px;
+  letter-spacing: 1.2px;
+  text-align: center;
+  height: 32px;
+  margin-bottom: 45px;
+}
+
+.valamiszoveg a{
+  text-decoration: none;
+  font-weight:bolder ;
+  color: black;
+}
 
 /* Reszponzív design */
 @media (max-width: 768px) {

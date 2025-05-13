@@ -7,58 +7,27 @@
     <title>ReceptKönyv - Regisztráció</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body style="overflow: hidden;" >
+<body>
     <div class="hatterkep">
-        <header>
-            <nav>
-                <div class="logo"><a href="#">E-Receptköny</a></div>
-                <ul class="nav-links">
-                    <li><a href="./index.html">Főoldal</a></li>
-                    <li><a href="./search.html">Keresés</a></li>
-                    <li><a href="./login.html">Bejelentkezés</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="auth-containerRegiszt">
-            <section class="auth-form">
-                <h1 class="alcim">Regisztráció</h1>
-                
-                <form id="register-form" method="POST" action="../php/register.php">
-                    <div class="form-group">
-                        <label class="label" for="username">Felhasználónév</label><br>
-                        <input class="input" type="text" id="username" name="username" required aria-required="true">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="label" for="email">Email cím</label><br>
-                        <input class="input" type="email" id="email" name="email" required aria-required="true">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="label" for="password">Jelszó</label><br>
-                        <input class="input" type="password" id="password" name="password" required aria-required="true">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="label" for="confirm-password">Jelszó megerősítése</label><br>
-                        <input class="input" type="password" id="confirm-password" name="confirm_password" required aria-required="true">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-block loginbtn">Regisztráció</button>
-                    
-                    <div class="auth-switch">
-                        Már van fiókod? <a href="./login.html">Jelentkezz be!</a>
-                    </div>
-                </form>
-            </section>
-        </main>
+        <div class="hero">
+            <div class="hero-container2">
+                <div class="geCim">
+                    Regisztrálj itt
+                </div>
+                <div class="felhasznalonev">
+                    <input type="text" placeholder="Felhasználónev...">
+                </div>
+                <div class="email">
+                    <input type="text" placeholder="Email...">
+                </div>
+                <div class="password">
+                    <input type="text" placeholder="Jelszó...">
+                </div>
+                <div class="password">
+                    <input type="text" placeholder="Jelszó újra...">
+                </div>
+            </div>
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2023 ReceptKönyv</p>
-    </footer>
-    
-    <script src="../js/register.js"></script>
 </body>
 </html>

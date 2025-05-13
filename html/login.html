@@ -9,49 +9,25 @@
 </head>
 <body>
     <div class="hatterkep">
-        <header>
-            <nav>
-                <div class="logo"><a href="#">E-Receptköny</a></div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Főoldal</a></li>
-                    <li><a href="search.html">Kersés</a></li>
-                    <li><a href="create.html">Új recept</a></li>
-                    <li><a href="register.html">Regisztráció</a></li>
-                </ul>
-            </nav>
-        </header>
-       
-        <main class="auth-containerBejel">
-            <section class="auth-form">
-                <h1 class="alcim" >Bejelentkezés</h1>
-               
-                <form id="login-form" method="POST" action="php/login.php">
-                    <div class="form-group">
-                        <label class="label" for="username">Felhasználónév vagy email</label><br>
-                        <input class="input" type="text" id="username" name="username" required aria-required="true">
-                    </div>
-                   
-                    <div class="form-group">
-                        <label class="label" for="password">Jelszó</label><br>
-                        <input class="input" type="password" id="password" name="password" required aria-required="true">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-block loginbtn">Bejelentkezés</button>
-                    
-                    
-                   
-                    <div class="auth-switch">
-                        Nincs még fiókod? <a href="register.html">Regisztrálj most!</a>
-                    </div>
-                </form>
-            </section>
-        </main>    
+        <div class="hero">
+            <div class="hero-container2">
+                <div class="geCim">
+                    Jelentkezz be
+                </div>
+                <div>
+                    <input  class="felhasznalonev" type="text" placeholder="Felhasználónev...">
+                </div>
+                <div >
+                    <input class="password" type="text" placeholder="Jelszó...">
+                </div>
+                <div>
+                    <button class="btn btn-primary">Bejelentkezés</button>
+                </div>
+                <div class="valamiszoveg">
+                    Ha nem lenne fiókod <a href="../html/register.html">itt</a> tudsz regisztrálni!
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <footer>
-        <p>&copy; 2023 ReceptKönyv</p>
-    </footer>
-   
-    <script src="js/login.js"></script>
 </body>
 </html>
