@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
             $stmt->execute([$username, $email, $hashed_password]);
             
-            header("Location: login.html");
+            header("Location: login.php");
             exit();
         } catch(PDOException $e) {
             if ($e->getCode() == 23000) {
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </form>
                 <div class="valamiszoveg">
-                    Ha van fiókod <a href="../html/login.html">itt</a> tudsz Bejelentkezni!
+                    Ha van fiókod <a href="../php/login.php">itt</a> tudsz Bejelentkezni!
                 </div>
             </div>
         </div>

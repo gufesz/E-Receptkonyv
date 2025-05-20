@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </form>
                 <div class="valamiszoveg">
-                    Ha nem lenne fiókod <a href="../html/register.html">itt</a> tudsz regisztrálni!
+                    Ha nem lenne fiókod <a href="../php/register.php">itt</a> tudsz regisztrálni!
                 </div>
             </div>
         </div>
