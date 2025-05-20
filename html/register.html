@@ -14,21 +14,23 @@
                 <div class="geCim">
                     Regisztrálj itt
                 </div>
-                <div class="felhasznalonev">
-                    <input type="text" placeholder="Felhasználónev...">
-                </div>
-                <div class="email">
-                    <input type="text" placeholder="Email...">
-                </div>
-                <div class="password">
-                    <input type="text" placeholder="Jelszó...">
-                </div>
-                <div class="password">
-                    <input type="text" placeholder="Jelszó újra...">
-                </div>
-                <div>
-                    <button class="btn btn-primary">Regisztrálás    </button>
-                </div>
+                <form action="register.php" method="post">
+                    <div class="felhasznalonev">
+                        <input type="text" name="username" placeholder="Felhasználónév..." required>
+                    </div>
+                    <div class="email">
+                        <input type="email" name="email" placeholder="Email..." required>
+                    </div>
+                    <div class="password">
+                        <input type="password" name="password" placeholder="Jelszó..." required>
+                    </div>
+                    <div class="password">
+                        <input type="password" name="confirm_password" placeholder="Jelszó újra..." required>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Regisztrálás</button>
+                    </div>
+                </form>
                 <div class="valamiszoveg">
                     Ha van fiókod <a href="../html/login.html">itt</a> tudsz Bejelentkezni!
                 </div>

@@ -14,15 +14,17 @@
                 <div class="geCim">
                     Jelentkezz be
                 </div>
-                <div>
-                    <input  class="felhasznalonev" type="text" placeholder="Felhasználónev...">
-                </div>
-                <div >
-                    <input class="password" type="text" placeholder="Jelszó...">
-                </div>
-                <div>
-                    <button class="btn btn-primary">Bejelentkezés</button>
-                </div>
+                <form action="login.php" method="post">
+                    <div>
+                        <input class="felhasznalonev" type="text" name="username" placeholder="Felhasználónév..." required>
+                    </div>
+                    <div>
+                        <input class="password" type="password" name="password" placeholder="Jelszó..." required>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Bejelentkezés</button>
+                    </div>
+                </form>
                 <div class="valamiszoveg">
                     Ha nem lenne fiókod <a href="../html/register.html">itt</a> tudsz regisztrálni!
                 </div>
@@ -30,4 +32,4 @@
         </div>
     </div>
 </body>
-</html>
+</html
