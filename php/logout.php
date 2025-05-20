@@ -3,6 +3,7 @@
 session_start();
 sessiom_unset();
 session_destroy();
-header("Location: login.html");
-exit();
+header('Content-Type: application/json');
+
+echo json_encode(['success' => true]);
 ?>

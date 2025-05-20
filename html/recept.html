@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Receptkönyv</title>
+    <title>Receptek - E-Receptkönyv</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -12,140 +13,32 @@
         <div class="nav-links">
             <a href="../html/index.html">Főoldal</a>
             <a href="../html/search.html">Keresés</a>
-            
+            <a href="#" id="logout">Kijelentkezés</a>
         </div>
     </nav>
     
-    <section class="hero">
-        <table>
-            <tr>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-                <td>
-                    <div class="card">
-                        <img src="#####" alt="####" style="width:100%">
-                        <h1>Valami</h1>
-                        <p class="price">$19.99</p>
-                        <p><button>Hozzávalók</button></p>
-                      </div>
-                </td>
-            </tr>
-        </table>
-        
-    </section>
+    <main>
+        <section class="hero">
+            <h1 class="geCim">Receptjeim</h1>
+            <div class="recipes-container"></div>
+        </section>
+
+        <!-- Recept részletek modális -->
+        <div id="recipeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="recipeTitle"></h2>
+                <img id="recipeImage" src="" alt="" class="modal-image">
+                <div class="recipe-details">
+                    <h3>Hozzávalók</h3>
+                    <ul id="ingredientsList"></ul>
+                    <h3>Elkészítés</h3>
+                    <ol id="instructionsList"></ol>
+                    <p><strong>Kategória:</strong> <span id="recipeCategory"></span></p>
+                    <p><strong>Idő:</strong> <span id="recipeTime"></span> perc</p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
