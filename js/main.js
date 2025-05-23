@@ -3,7 +3,7 @@ async function checkAuth() {
     try {
         const response = await fetch('check_session.php');
         const data = await response.json();
-        if (!data.loggedIn) window.location.href = 'login.php';
+        if (!data.loggedIn) window.location.href = '../php/login.php';
     } catch (error) {
         console.error('Auth error:', error);
     }
@@ -14,7 +14,7 @@ async function loadRecipes() {
     await checkAuth();
     
     try {
-        const response = await fetch('get_recipes.php');
+        const response = await fetch('../php/get_recipes.php');
         const recipes = await response.json();
         
         const container = document.querySelector('.recipes-container');
@@ -42,7 +42,7 @@ async function loadRecipes() {
 // Recept részletek
 async function showRecipeDetails(recipeId) {
     try {
-        const response = await fetch(`get_recipe_details.php?id=${recipeId}`);
+        const response = await fetch(`../php/get_recipe_details.php?id=${recipeId}`);
         const recipe = await response.json();
         
         // Modal feltöltése

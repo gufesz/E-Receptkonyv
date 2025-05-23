@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             
-            header("Location: index.html");
+            header("Location: ../html/index.html");
             exit();
         } else {
             $error = "Hibás adatok!";
