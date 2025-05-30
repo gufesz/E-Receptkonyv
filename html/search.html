@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Receptkönyv</title>
+    <title>Keresés - E-Receptkönyv</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -17,11 +17,13 @@
     </nav>
     
     <section class="hero">
-        <div class="kereso">
-            <input type="text" placeholder="Recept keresés...">
+        <div class="hero-container">
+            <div class="kereso">
+                <input type="text" id="searchInput" placeholder="Recept keresés...">
+            </div>
+            <div class="recipes-container" id="searchResults"></div>
         </div>
-        
     </section>
-    <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receptek - E-Receptkönyv</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -20,26 +19,37 @@
     <main>
         <section class="hero">
             <h1 class="geCim">Receptjeim</h1>
-            <div class="recipes-container"></div>
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="">Összes kategória</option>
+                    <option value="Magyar">Magyar</option>
+                    <option value="Olasz">Olasz</option>
+                    <option value="Desszert">Desszert</option>
+                    <option value="Gyors">Gyors</option>
+                    <option value="Egészséges">Egészséges</option>
+                </select>
+                <input type="number" id="timeFilter" placeholder="Max. idő (perc)">
+            </div>
+            <div class="recipes-container" id="recipesContainer"></div>
         </section>
 
-        <!-- Recept részletek modális -->
+        <!-- Recipe details modal -->
         <div id="recipeModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2 id="recipeTitle"></h2>
-                <img id="recipeImage" src="" alt="" class="modal-image">
+                <img id="recipeImage" src="" alt="" style="max-width:100%; height:auto; border-radius:8px;">
                 <div class="recipe-details">
                     <h3>Hozzávalók</h3>
                     <ul id="ingredientsList"></ul>
                     <h3>Elkészítés</h3>
                     <ol id="instructionsList"></ol>
                     <p><strong>Kategória:</strong> <span id="recipeCategory"></span></p>
-                    <p><strong>Idő:</strong> <span id="recipeTime"></span> perc</p>
+                    <p><strong>Elkészítési idő:</strong> <span id="recipeTime"></span> perc</p>
                 </div>
             </div>
         </div>
     </main>
-    <script src="../js/main.js"></script>
+    <script src="../js/recipes.js"></script>
 </body>
 </html>

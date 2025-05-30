@@ -1,9 +1,8 @@
 <?php
-sessiom_start();
+session_start();
 
-if(!isset($_SESSION['user_id'])){
+if(!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
-
 ?>

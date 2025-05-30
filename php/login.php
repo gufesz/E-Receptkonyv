@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: ../html/index.html");
             exit();
         } else {
-            $error = "Hibás adatok!";
+            $error = "Hibás felhasználónév vagy jelszó!";
         }
     } catch(PDOException $e) {
         $error = "Hiba: " . $e->getMessage();
@@ -33,31 +33,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jelentkezz be a ReceptKönyvbe, hogy megoszthasd receptjeidet!">
-    <title>ReceptKöny - Bejelentkezés</title>
+    <title>Bejelentkezés - E-Receptkönyv</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="hatterkep">
-        <div class="hero">
-            <div class="hero-container2">
-                <div class="geCim">
-                    Jelentkezz be
+    <div class="hero">
+        <div class="hero-container2">
+            <div class="geCim">
+                Jelentkezz be
+            </div>
+            <?php if ($error): ?>
+                <div class="error" style="color:red; margin-bottom:15px;"><?= $error ?></div>
+            <?php endif; ?>
+            <form action="login.php" method="post">
+                <div>
+                    <input class="felhasznalonev" type="text" name="username" placeholder="Felhasználónév..." required>
                 </div>
-                <form action="login.php" method="post">
-                    <div>
-                        <input class="felhasznalonev" type="text" name="username" placeholder="Felhasználónév..." required>
-                    </div>
-                    <div>
-                        <input class="password" type="password" name="password" placeholder="Jelszó..." required>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Bejelentkezés</button>
-                    </div>
-                </form>
-                <div class="valamiszoveg">
-                    Ha nem lenne fiókod <a href="../php/register.php">itt</a> tudsz regisztrálni!
+                <div>
+                    <input class="password" type="password" name="password" placeholder="Jelszó..." required>
                 </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Bejelentkezés</button>
+                </div>
+            </form>
+            <div class="valamiszoveg">
+                Nincs még fiókod? <a href="register.php">Regisztrálj itt!</a>
             </div>
         </div>
     </div>
