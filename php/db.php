@@ -31,7 +31,6 @@ try {
         FOREIGN KEY (user_id) REFERENCES users(id)
     )");
     
-    // Insert sample recipes if table is empty
     $count = $conn->query("SELECT COUNT(*) FROM recipes")->fetchColumn();
     if ($count == 0) {
         $sampleRecipes = [
@@ -59,7 +58,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -68,7 +67,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -77,7 +76,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -86,7 +85,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -95,7 +94,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -104,7 +103,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -113,7 +112,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -122,7 +121,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -131,7 +130,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -140,7 +139,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -149,7 +148,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -158,7 +157,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -167,7 +166,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -176,7 +175,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
@@ -185,7 +184,7 @@ try {
                 'category' => '',
                 'ingredients' => "",
                 'instructions' => "",
-                'time' => ,
+                'time' => 1,
                 'image' => ''
             ],
             [
